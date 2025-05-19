@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2d3748;
+  --primary-hover: #1a202c;
+  --primary-light: #e2e8f0;
+  --text-color: #1a202c;
+  --text-light: #4a5568;
+  --background: #ffffff;
+  --background-alt: #f7fafc;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius: 4px;
+  --transition: all 0.2s ease;
+}
+
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  color: var(--text-color);
+  background-color: var(--background);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+header {
+  background-color: var(--background);
+  padding: 6rem 0 3rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  letter-spacing: -0.025em;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-light);
+  max-width: 600px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.project-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f1f5f9;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  object-position: top;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.03);
+}
+
+.project-content {
+  padding: 1.75rem;
+}
+
+.project-content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.project-content p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: var(--transition);
+  border: 1px solid var(--primary-color);
+}
+
+.project-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+footer {
+  background-color: var(--background);
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+footer p {
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  header {
+    padding: 4rem 0 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 3rem 0 2rem;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: fadeIn 0.4s ease-out forwards;
+  animation-fill-mode: both;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.project-card:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.project-card:nth-child(4) {
+  animation-delay: 0.15s;
+}
+.project-card:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.project-card:nth-child(6) {
+  animation-delay: 0.25s;
+}
+.project-card:nth-child(7) {
+  animation-delay: 0.3s;
+}
+.project-card:nth-child(8) {
+  animation-delay: 0.35s;
+}
+.project-card:nth-child(9) {
+  animation-delay: 0.4s;
+}

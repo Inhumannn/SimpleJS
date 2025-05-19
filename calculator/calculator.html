@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Mini Calculator</title>
+  </head>
+  <body>
+    <table class="calculatrice" id="calc">
+      <tr>
+        <td colspan="4" class="calc_td_resultat">
+          <input
+            type="text"
+            readonly="readonly"
+            name="calc_resultat"
+            id="calc_resultat"
+            class="calc_resultat"
+            onkeydown="javascript:key_detect_calc('calc',event);"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="CE" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="&larr;" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="%" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="+" />
+        </td>
+      </tr>
+      <tr>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="7" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="8" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="9" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="-" />
+        </td>
+      </tr>
+      <tr>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="4" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="5" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="6" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="x" />
+        </td>
+      </tr>
+      <tr>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="1" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="2" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="3" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="&divide;" />
+        </td>
+      </tr>
+      <tr>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="0" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="&plusmn;" />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="," />
+        </td>
+        <td class="calc_td_btn">
+          <input type="button" class="calc_btn" value="=" />
+        </td>
+      </tr>
+    </table>
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
