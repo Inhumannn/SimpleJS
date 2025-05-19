@@ -1,8 +1,8 @@
 // Saving calc
 calcArray = [];
-let calc = 0;
 
 const display = document.querySelector("#calc_resultat");
+display.value = 0;
 const boutons = document.querySelectorAll(".calc_btn");
 boutons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -10,26 +10,23 @@ boutons.forEach((btn) => {
     if (valeur === "=") {
       const calcArrayJoin = calcArray.join("");
       try {
-        const resultat = eval(calcArrayJoin);
-        console.log(`Result : ${resultat}`);
-        calcArray = [resultat.toString()];
+        // Fasst function
+        const resultat = Function(`"use strict"; return (${calcArrayJoin})`)();
         display.value = resultat;
+        calcArray = [resultat.toString()];
       } catch (e) {
         display.value = "An error has occurred";
         calcArray = [];
       }
     } else if (valeur === "ce") {
+      display.value = calcArray.join("");
       calcArray = [];
     } else if (valeur === "←") {
+      display.value = calcArray.join("");
       calcArray.pop();
     } else {
       calcArray.push(valeur);
-      // Faire une boucle pour parcourir le tableau
-      // Récupérer chaque élément et les ajouter à display.value
-      let showTemp = "";
-      showTemp += btn.value;
-      //
-      display.value = showTemp;
+      display.value = calcArray.join("");
     }
     console.log(calcArray);
   });
