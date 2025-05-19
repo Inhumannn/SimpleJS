@@ -11,11 +11,11 @@ boutons.forEach((btn) => {
       const calcArrayJoin = calcArray.join("");
       try {
         const resultat = eval(calcArrayJoin);
-        console.log(`Résultat : ${resultat}`);
+        console.log(`Result : ${resultat}`);
         calcArray = [resultat.toString()];
         display.value = resultat;
       } catch (e) {
-        console.log("Une erreur est survenues");
+        display.value = "An error has occurred";
         calcArray = [];
       }
     } else if (valeur === "ce") {
@@ -24,6 +24,12 @@ boutons.forEach((btn) => {
       calcArray.pop();
     } else {
       calcArray.push(valeur);
+      // Faire une boucle pour parcourir le tableau
+      // Récupérer chaque élément et les ajouter à display.value
+      let showTemp = "";
+      showTemp += btn.value;
+      //
+      display.value = showTemp;
     }
     console.log(calcArray);
   });

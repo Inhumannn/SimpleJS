@@ -13,7 +13,7 @@
 .calc_td_resultat {
   text-align: center;
 }
-.calc_resultat {
+#calc_resultat {
   display: flex;
   width: 254px;
   padding: 10px;
