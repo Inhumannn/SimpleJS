@@ -15,7 +15,7 @@ boutons.forEach((btn) => {
         display.value = resultat;
         calcArray = [resultat.toString()];
       } catch (e) {
-        display.value = "An error has occurred";
+        display.value = "An error has occurred. Press 'ce'";
         calcArray = [];
       }
     } else if (valeur === "ce") {

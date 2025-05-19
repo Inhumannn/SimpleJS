@@ -7,83 +7,85 @@
     <title>Mini Calculator</title>
   </head>
   <body>
-    <table class="calculatrice" id="calc">
-      <tr>
-        <td colspan="4" class="calc_td_resultat">
-          <input type="text" readonly="readonly" id="calc_resultat" />
-        </td>
-      </tr>
-      <tr>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="ce" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="←" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="%" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="+" />
-        </td>
-      </tr>
-      <tr>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="7" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="8" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="9" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="-" />
-        </td>
-      </tr>
-      <tr>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="4" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="5" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="6" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="*" />
-        </td>
-      </tr>
-      <tr>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="1" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="2" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="3" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="/" />
-        </td>
-      </tr>
-      <tr>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="0" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="+-" />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="," />
-        </td>
-        <td class="calc_td_btn">
-          <input type="button" class="calc_btn" value="=" />
-        </td>
-      </tr>
-    </table>
-    <script src="js/calculator.js"></script>
+    <div id="div">
+      <table class="calculatrice" id="calc">
+        <tr>
+          <td colspan="4" class="calc_td_resultat">
+            <input type="text" readonly="readonly" id="calc_resultat" />
+          </td>
+        </tr>
+        <tr>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="ce" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="←" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="%" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="+" />
+          </td>
+        </tr>
+        <tr>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="7" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="8" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="9" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="-" />
+          </td>
+        </tr>
+        <tr>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="4" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="5" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="6" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="*" />
+          </td>
+        </tr>
+        <tr>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="1" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="2" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="3" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="/" />
+          </td>
+        </tr>
+        <tr>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="0" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="+-" />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="," />
+          </td>
+          <td class="calc_td_btn">
+            <input type="button" class="calc_btn" value="=" />
+          </td>
+        </tr>
+      </table>
+      <script src="js/calculator.js"></script>
+    </div>
   </body>
 </html>
