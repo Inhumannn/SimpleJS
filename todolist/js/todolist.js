@@ -2,6 +2,7 @@ async function init() {
   const todos = await data();
   displayToDoList(todos);
   deleteToDoList();
+  addToDoList(todos);
 }
 init();
 
@@ -40,20 +41,44 @@ function displayToDoList(todos) {
 function deleteToDoList() {
   const btnDeletes = document.querySelectorAll(".btn-danger");
   btnDeletes.forEach((btn) => {
-    btn.addEventListener("click", (e) => {s
+    btn.addEventListener("click", (e) => {
       const todoItem = e.target.closest("li.todo");
-      if (todoItem) {
-        todoItem.remove();
-      }
+      todoItem.remove();
     });
   });
 }
 
-function addToDoList() {
-  const btnAdd = document.querySelectorAll(".btn-primary");
-  btnAdd.addEventListener("click", (e) => {
+function addToDoList(todos) {
+  const btnAdd = document.querySelector("#btnAdd");
+
+  btnAdd.addEventListener("click", async (e) => {
     e.preventDefault();
-    const formControl = document.querySelector(".form-control").value;
-    console.log(formControl);
+    const newTitle = document.querySelector(".form-control").value;
+
+    const newTodo = {
+      title: newTitle,
+      completed: false,
+      userId: 1,
+    };
+
+    try {
+      const rep = await fetch("https://jsonplaceholder.typicode.com/todos", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newTodo),
+      });
+      const newData = await rep.json();
+      console.log(newData);
+      todos.push(newData);
+
+      displayToDoList(todos);
+      deleteToDoList();
+
+      newTitle.value = "";
+    } catch (err) {
+      console.log("Error: ", err);
+    }
   });
 }
