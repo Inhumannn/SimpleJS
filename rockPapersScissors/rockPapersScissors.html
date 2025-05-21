@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Rock Papers Scissors</title>
+  </head>
+  <body>
+    <header>
+      <h1>Rock Papers Scissors</h1>
+      <p>
+        <span class="pointsUser">0</span> : <span class="pointsBot">0</span>
+      </p>
+    </header>
+    <main>
+      <div>
+        <h2>You</h2>
+        <div id="choiceUser"></div>
+      </div>
+      <div>
+        <h2>bot</h2>
+        <div id="choiceBot"></div>
+      </div>
+    </main>
+    <footer>
+      <h2>↓ choice ↓</h2>
+      <div>
+        <i data-choice="paper" class="fa-solid fa-hand"></i>
+        <i data-choice="scissors" class="fa-solid fa-hand-scissors"></i>
+        <i data-choice="rock" class="fa-solid fa-hand-back-fist"></i>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/2bb90c57b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>

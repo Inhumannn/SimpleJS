@@ -21,14 +21,30 @@ body {
 }
 header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   gap: 50px;
   padding-bottom: 15px;
+  input {
+    background: #f90000;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
 }
 main {
   form {
     display: flex;
     justify-content: center;
     gap: 30px;
+    input,
+    select {
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: 1px solid black;
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }

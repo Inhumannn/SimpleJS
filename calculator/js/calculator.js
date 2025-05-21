@@ -1,5 +1,5 @@
 // Saving calc
-calcArray = [];
+let calcArray = [];
 
 const display = document.querySelector("#calc_resultat");
 display.value = 0;

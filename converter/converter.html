@@ -9,23 +9,35 @@
   <body>
     <div>
       <header id="titles">
-        <h2>Temperature</h2>
-        <h2>Length</h2>
-        <h2>idk</h2>
+        <h2>length</h2>
+        <input type="text" name="display" id="display" readonly="readonly" />
       </header>
       <main>
         <form action="#">
-          <input type="text" name="convert" id="convert" placeholder=" Unit" />
-          <select name="select" id="select">
-            <option value="value1">value1</option>
-            <option value="value1">value2</option>
+          <input type="text" name="number" id="number" placeholder=" 0" />
+          <select name="from" id="from">
+            <option value="">From</option>
+            <option value="km">km</option>
+            <option value="hm">hm</option>
+            <option value="dam">dam</option>
+            <option value="m">m</option>
+            <option value="dm">dm</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
           </select>
-          <select name="select" id="select2">
-            <option value="value1">value1</option>
-            <option value="value1">value2</option>
+          <select name="towards" id="towards">
+            <option value="">Towards</option>
+            <option value="km">km</option>
+            <option value="hm">hm</option>
+            <option value="dam">dam</option>
+            <option value="m">m</option>
+            <option value="dm">dm</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
           </select>
         </form>
       </main>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
